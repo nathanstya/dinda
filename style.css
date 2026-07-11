@@ -927,9 +927,11 @@ body {
 }
 
 /* Responsive adjustment for actual mobile screens & small browser viewports */
-@media (max-width: 600px) or (max-height: 850px) {
+@media (max-width: 992px) or (max-height: 850px) {
   body {
     background-color: #060713;
+    height: 100vh;
+    height: 100dvh;
   }
   
   .phone-container {
@@ -1057,4 +1059,5 @@ body {
     line-height: 1.45;
   }
 }
+
 
