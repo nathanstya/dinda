@@ -926,30 +926,135 @@ body {
   margin-top: 15px;
 }
 
-/* Responsive adjustment for actual mobile screens */
-@media (max-width: 440px) {
+/* Responsive adjustment for actual mobile screens & small browser viewports */
+@media (max-width: 600px) or (max-height: 850px) {
   body {
     background-color: #060713;
   }
   
   .phone-container {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
   }
   
   .phone-screen {
-    border-radius: 0;
-    border: none;
+    border-radius: 0 !important;
+    border: none !important;
   }
   
   .phone-speaker, .phone-dynamic-island {
-    display: none;
+    display: none !important;
   }
   
   .status-bar {
     padding: 14px 20px 0 20px;
   }
+
+  .screen-content {
+    padding: 55px 16px 20px 16px;
+  }
+
+  /* Scale down components on smaller screens to prevent overflow */
+  .greeting-header {
+    max-width: 80%;
+  }
+
+  .greeting-title {
+    font-size: 20px;
+  }
+
+  .moon-wrapper {
+    width: 62px;
+    height: 62px;
+    top: 72px;
+    right: 16px;
+  }
+
+  .moon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .moon-glow {
+    width: 62px;
+    height: 62px;
+    top: -6px;
+    left: -6px;
+  }
+
+  .characters-container {
+    padding-bottom: 70px;
+  }
+
+  .bear-wrapper {
+    width: 130px;
+    height: 130px;
+  }
+
+  .toy-teddy {
+    width: 52px;
+    height: 52px;
+    bottom: 50px;
+    right: 10px;
+  }
+
+  .magic-dock {
+    padding: 10px 8px;
+    margin-bottom: 5px;
+  }
+
+  .dock-icon {
+    font-size: 19px;
+  }
+
+  .dock-text {
+    font-size: 8.5px;
+  }
+
+  .love-toast {
+    bottom: 145px;
+    font-size: 13px;
+    padding: 8px 18px;
+  }
+
+  /* Scaled envelope for mobile viewports */
+  .envelope-animation {
+    width: 220px;
+    height: 124px;
+    margin-top: 120px;
+  }
+
+  .envelope-flap {
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    border-top: 70px solid #ffb7c5;
+  }
+
+  .envelope-letter {
+    width: 196px;
+    height: 108px;
+    left: 12px;
+    padding: 10px;
+  }
+
+  .envelope-letter.slide-up {
+    transform: translateY(-145px);
+    height: 240px;
+  }
+
+  .letter-greeting {
+    font-size: 13px;
+  }
+
+  .letter-text {
+    font-size: 10.5px;
+    line-height: 1.45;
+  }
 }
+
