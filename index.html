@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Tidur Dinda ❤️</title>
+  <!-- Google Fonts for cute and premium typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fullscreen Stars Background for the whole browser -->
+  <div class="web-bg-stars" id="web-bg-stars"></div>
+
+  <!-- Mobile Phone Mockup Container -->
+  <div class="phone-container">
+    <!-- Phone Bezel & Hardware Details -->
+    <div class="phone-speaker"></div>
+    <div class="phone-dynamic-island"></div>
+    
+    <!-- Phone Screen Area -->
+    <div class="phone-screen" id="phone-screen">
+      
+      <!-- Real-time Status Bar -->
+      <div class="status-bar">
+        <span class="status-time" id="status-time">00:00</span>
+        <div class="status-icons">
+          <svg class="icon-wifi" viewBox="0 0 24 24" width="16" height="16">
+            <path fill="currentColor" d="M12 21l-12-12c2.4-2.4 5.6-3.8 9-3.8s6.6 1.4 9 3.8l-12 12zm0-18c-3.7 0-7.2 1.3-10 3.7l1.4 1.4c2.4-2 5.5-3.1 8.6-3.1s6.2 1.1 8.6 3.1l1.4-1.4c-2.8-2.4-6.3-3.7-10-3.7z"/>
+          </svg>
+          <span class="battery-pct">88%</span>
+          <div class="icon-battery">
+            <div class="battery-level"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sky Background (Color state managed by JS when moon clicked) -->
+      <div class="sky-container" id="sky-container">
+        <div class="sky-gradient active-sky" id="sky-midnight"></div>
+        <div class="sky-gradient" id="sky-purple"></div>
+        <div class="sky-gradient" id="sky-violet"></div>
+        <div class="sky-gradient" id="sky-aurora"></div>
+      </div>
+
+      <!-- Twinkling Starfield -->
+      <div class="starfield" id="starfield"></div>
+
+      <!-- Floating Clouds -->
+      <div class="clouds">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+      </div>
+
+      <!-- Main Contents (Scrollable if needed, but designed to fit perfectly) -->
+      <div class="screen-content">
+        
+        <!-- Interactive Floating Moon (🌸 Bulan mengambang pelan) -->
+        <div class="moon-wrapper" id="interactive-moon" title="Sentuh untuk ubah warna langit!">
+          <div class="moon">
+            <!-- Moon Face details -->
+            <div class="moon-eyes">
+              <div class="moon-eye left"></div>
+              <div class="moon-eye right"></div>
+            </div>
+            <div class="moon-mouth"></div>
+            <div class="moon-blush"></div>
+          </div>
+          <div class="moon-glow"></div>
+          <!-- Little flower on moon for 🌸 feel -->
+          <div class="moon-flower">🌸</div>
+        </div>
+
+        <!-- Greeting Header -->
+        <div class="greeting-header">
+          <h1 class="greeting-title">Selamat Tidur Dinda ❤️</h1>
+          <p class="greeting-subtitle">Sentuh benda-benda untuk keajaiban ✨</p>
+        </div>
+
+        <!-- Character & Toy Area -->
+        <div class="characters-container">
+          
+          <!-- Cute Waving Bear (🐻 Karakter lucu melambaikan tangan) -->
+          <div class="bear-wrapper" id="waving-bear">
+            <svg class="bear-svg" viewBox="0 0 200 200">
+              <!-- Shadow -->
+              <ellipse cx="100" cy="180" rx="45" ry="10" fill="rgba(0,0,0,0.2)" />
+              
+              <!-- Ears -->
+              <circle cx="60" cy="65" r="20" fill="#a1887f" />
+              <circle cx="60" cy="65" r="12" fill="#ffcdd2" />
+              <circle cx="140" cy="65" r="20" fill="#a1887f" />
+              <circle cx="140" cy="65" r="12" fill="#ffcdd2" />
+              
+              <!-- Body -->
+              <rect x="55" y="110" width="90" height="75" rx="35" fill="#8d6e63" />
+              <!-- Belly -->
+              <ellipse cx="100" cy="145" rx="25" ry="20" fill="#d7ccc8" />
+              
+              <!-- Left Arm (Resting/holding) -->
+              <ellipse cx="40" cy="130" rx="15" ry="22" transform="rotate(-10 40 130)" fill="#795548" />
+              
+              <!-- Feet -->
+              <circle cx="65" cy="180" r="18" fill="#795548" />
+              <circle cx="65" cy="180" r="10" fill="#d7ccc8" />
+              <circle cx="135" cy="180" r="18" fill="#795548" />
+              <circle cx="135" cy="180" r="10" fill="#d7ccc8" />
+              
+              <!-- Head -->
+              <rect x="45" y="60" width="110" height="90" rx="45" fill="#8d6e63" />
+              
+              <!-- Eyes -->
+              <circle cx="75" cy="95" r="6" fill="#2d1500" />
+              <circle cx="125" cy="95" r="6" fill="#2d1500" />
+              <circle cx="77" cy="93" r="2" fill="#fff" /> <!-- Eye shine -->
+              <circle cx="127" cy="93" r="2" fill="#fff" /> <!-- Eye shine -->
+              
+              <!-- Blush cheeks -->
+              <circle cx="63" cy="110" r="8" fill="#ff8a80" opacity="0.7" />
+              <circle cx="137" cy="110" r="8" fill="#ff8a80" opacity="0.7" />
+              
+              <!-- Muzzle/Nose area -->
+              <ellipse cx="100" cy="112" rx="18" ry="14" fill="#f5f5f5" />
+              <polygon points="94,107 106,107 100,113" fill="#3e2723" />
+              <path d="M100,113 L100,119 M95,119 Q100,123 105,119" fill="none" stroke="#3e2723" stroke-width="2.5" stroke-linecap="round" />
+              
+              <!-- Right Arm (Waving) -->
+              <g class="waving-arm-group">
+                <ellipse cx="150" cy="115" rx="15" ry="25" class="waving-arm-bone" fill="#795548" />
+                <path d="M142,105 Q152,95 160,102" fill="none" stroke="#795548" stroke-width="2" stroke-linecap="round" />
+              </g>
+            </svg>
+            <div class="bear-sleep-z">
+              <span>Z</span><span>z</span><span>z</span>
+            </div>
+          </div>
+
+          <!-- Cute Teddy Bear Toy (🧸 Boneka -> lompat-lompat) -->
+          <div class="toy-teddy" id="interactive-teddy" title="Sentuh untuk membuatku melompat!">
+            <svg class="teddy-svg" viewBox="0 0 120 120">
+              <ellipse cx="60" cy="110" rx="30" ry="7" fill="rgba(0,0,0,0.15)" />
+              <!-- Ears -->
+              <circle cx="40" cy="45" r="12" fill="#bcaaa4" />
+              <circle cx="40" cy="45" r="7" fill="#ff8a80" />
+              <circle cx="80" cy="45" r="12" fill="#bcaaa4" />
+              <circle cx="80" cy="45" r="7" fill="#ff8a80" />
+              <!-- Body -->
+              <rect x="42" y="75" width="36" height="30" rx="12" fill="#a1887f" />
+              <ellipse cx="60" cy="90" rx="12" ry="10" fill="#d7ccc8" />
+              <!-- Head -->
+              <circle cx="60" cy="62" r="22" fill="#bcaaa4" />
+              <!-- Muzzle -->
+              <ellipse cx="60" cy="68" rx="8" ry="6" fill="#fff" />
+              <circle cx="60" cy="65" r="3" fill="#3e2723" />
+              <!-- Eyes -->
+              <circle cx="52" cy="58" r="3" fill="#3e2723" />
+              <circle cx="68" cy="58" r="3" fill="#3e2723" />
+              <!-- Ribbon/Bow -->
+              <path d="M54,77 L66,77 L60,82 Z" fill="#ff4081" />
+              <circle cx="60" cy="77" r="3.5" fill="#fff" />
+            </svg>
+            <div class="toy-label">🧸</div>
+          </div>
+
+        </div>
+
+        <!-- Floating Message Display (Triggered by Heart ❤️ click) -->
+        <div class="love-toast" id="love-toast">
+          Aku sayang kamu 🤍
+        </div>
+
+        <!-- Dynamic Petals Canvas Container (🌹 Bunga -> kelopak berjatuhan) -->
+        <div class="petals-container" id="petals-container"></div>
+
+        <!-- Navigation/Magic Dock containing interactive items -->
+        <div class="magic-dock">
+          <!-- ❤️ Hati -->
+          <button class="dock-item" id="btn-heart" title="Sentuh untuk mengungkapkan cinta">
+            <span class="dock-icon">❤️</span>
+            <span class="dock-text">Cinta</span>
+          </button>
+          
+          <!-- ⭐ Bintang -->
+          <button class="dock-item" id="btn-star" title="Sentuh untuk membunyikan bintang">
+            <span class="dock-icon">⭐</span>
+            <span class="dock-text">Ting!</span>
+          </button>
+          
+          <!-- 💌 Surat -->
+          <button class="dock-item" id="btn-letter" title="Buka surat rahasia">
+            <span class="dock-icon animate-pulse-slow">💌</span>
+            <span class="dock-text">Surat</span>
+          </button>
+          
+          <!-- 🌹 Bunga -->
+          <button class="dock-item" id="btn-flower" title="Hujani kelopak mawar">
+            <span class="dock-icon">🌹</span>
+            <span class="dock-text">Mawar</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Secret Letter Modal (💌 Surat -> membuka pesan rahasia) -->
+      <div class="modal-overlay" id="letter-modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-flower">🌸</div>
+            <h3>Pesan Rahasia Untuk Dinda</h3>
+            <button class="modal-close" id="btn-close-modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="envelope-animation" id="envelope">
+              <div class="envelope-flap"></div>
+              <div class="envelope-body"></div>
+              <div class="envelope-letter" id="envelope-letter">
+                <p class="letter-greeting">Hai Dinda Cantik... ✨</p>
+                <p class="letter-text">
+                  Hari ini pasti melelahkan ya? Terima kasih banyak sudah berjuang, bertahan, dan tersenyum melewati hari ini dengan luar biasa. 🌟
+                </p>
+                <p class="letter-text">
+                  Sekarang saatnya kamu istirahat. Lepaskan semua beban pikiranmu. Tarik napas perlahan... lalu hembuskan. Biarkan matamu yang indah terpejam dengan tenang. 😴
+                </p>
+                <p class="letter-text">
+                  Semoga kamu memimpikan hal-hal yang indah malam ini, dan bangun esok hari dengan senyuman yang cerah. Ingat ya, kamu berharga dan aku selalu mendukungmu. 💕
+                </p>
+                <p class="letter-signature">Tidur yang nyenyak ya... Good Night! 💤🌙</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
